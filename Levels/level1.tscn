@@ -1,0 +1,102 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Hazards/SprikeTop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Items/jumpPad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/GameState.gd" type="Script" id=6]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends AudioStreamPlayer
+
+"
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 448, 416 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 61, 0 )
+tile_set = ExtResource( 2 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( -1245244, 5, 0, -1179708, 5, 0, -1114172, 5, 0, -1048636, 5, 0, -983100, 5, 0, -917564, 5, 0, -852028, 5, 0, -851983, 3, 0, -786492, 5, 0, -720956, 5, 0, -655420, 5, 0, -655400, 3, 0, -655390, 3, 0, -589884, 5, 0, -524348, 5, 0, -458812, 5, 0, -393276, 5, 0, -393264, 3, 0, -327740, 5, 0, -262204, 5, 0, -262167, 3, 0, -196668, 5, 0, -262110, 5, 0, -131132, 5, 0, -65596, 5, 0, -65573, 2, 0, -65549, 2, 0, -131018, 4, 0, -60, 5, 0, 65476, 5, 0, 131012, 5, 0, 65579, 4, 0, 196547, 5, 0, 131102, 2, 0, 262083, 5, 0, 196672, 2, 0, 196689, 3, 0, 327619, 5, 0, 327637, 2, 0, 327649, 2, 0, 327661, 2, 0, 327673, 2, 0, 262170, 3, 0, 393155, 5, 0, 458691, 5, 0, 393253, 2, 0, 393266, 2, 0, 393274, 2, 0, 524227, 5, 0, 458823, 2, 0, 458830, 2, 0, 589763, 5, 0, 655299, 5, 0, 720835, 2, 0, 720841, 2, 0, 720847, 2, 0, 720853, 2, 0, 720854, 2, 0, 720855, 2, 0, 720856, 2, 0, 720857, 2, 0, 720858, 2, 0, 720859, 2, 0, 720860, 2, 0, 720861, 2, 0, 720862, 2, 0, 720863, 2, 0, 720864, 2, 0, 720865, 2, 0, 720866, 2, 0, 720867, 2, 0, 720868, 2, 0, 720869, 2, 0, 720870, 2, 0, 720871, 2, 0, 720872, 2, 0, 720873, 2, 0, 720874, 2, 0, 720875, 2, 0, 720876, 2, 0, 720877, 2, 0, 720878, 2, 0, 720879, 2, 0, 720880, 2, 0, 720881, 2, 0, 720882, 2, 0, 720883, 2, 0, 720884, 2, 0, 720885, 2, 0, 720886, 2, 0, 720887, 2, 0, 720888, 2, 0, 720889, 2, 0, 655364, 2, 0, 655376, 2, 0, 786455, 2, 0 )
+
+[node name="Hazards" type="Node" parent="."]
+
+[node name="SprikeTop" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 1256, 616 )
+
+[node name="SprikeTop2" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 2520, 360 )
+
+[node name="SprikeTop3" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 1768, 224 )
+
+[node name="SprikeTop4" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 1656, 744 )
+
+[node name="Coin" type="Node" parent="."]
+
+[node name="Coin" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -2025.95, 544.286 )
+
+[node name="Coin2" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -478.77, 569.484 )
+
+[node name="Coin3" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -609.802, 564.445 )
+
+[node name="Coin4" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -720.675, 569.484 )
+
+[node name="Coin5" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -1476.63, 403.175 )
+
+[node name="Coin6" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -1320.4, 357.818 )
+
+[node name="Coin7" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -1144.01, 146.151 )
+
+[node name="Coin8" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -977.699, -206.627 )
+
+[node name="Coin9" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -1098.65, -125.992 )
+
+[node name="Coin10" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -1179.29, -5.03967 )
+
+[node name="Coin11" parent="Coin" instance=ExtResource( 8 )]
+position = Vector2( -1249.84, 156.23 )
+scale = Vector2( 1.20312, 1.13876 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+script = SubResource( 1 )
+
+[node name="jumpPads" type="Node" parent="."]
+
+[node name="jumpPad" parent="jumpPads" instance=ExtResource( 5 )]
+position = Vector2( 3064, 24 )
+
+[node name="jumpPad2" parent="jumpPads" instance=ExtResource( 5 )]
+position = Vector2( -787.137, -934.396 )
+
+[node name="jumpPad3" parent="jumpPads" instance=ExtResource( 5 )]
+position = Vector2( -3288, 576 )
+
+[node name="jumpPad4" parent="jumpPads" instance=ExtResource( 5 )]
+position = Vector2( -1848, 216 )
+
+[node name="jumpPad5" parent="jumpPads" instance=ExtResource( 5 )]
+position = Vector2( -1311.79, -360.728 )
+
+[node name="GUI" parent="." instance=ExtResource( 7 )]

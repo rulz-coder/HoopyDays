@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/game_over_bad_chest.wav-ae0f968e94acf246d982cfd60c046d04.sample"
+
+[deps]
+
+source_file="res://SFX/game_over_bad_chest.wav"
+dest_files=[ "res://.import/game_over_bad_chest.wav-ae0f968e94acf246d982cfd60c046d04.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
